@@ -9,7 +9,8 @@ import {
 } from "@/app/style/variants";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import FontAwesomeIcon from "react-fontawesome";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPaperPlane } from "@fortawesome/free-regular-svg-icons";
 
 type Props = {
   project: ProjectType;
@@ -95,12 +96,12 @@ const ProjectInfo = ({ project, evenOdd }: Props) => {
         evenOdd === "even" ? " w-[45%] order-0 p-5" : " w-[45%] order-1 p-5"
       }
     >
-      <div>
+      <div className="leading-5">
         {project.description.map((item, index) => {
           return <p key={index}>{item}</p>;
         })}
       </div>
-      <div className="grid grid-cols-3 w-full">
+      <div className="grid grid-cols-3 w-full gap-2 mt-2">
         <p className="transparant-button">Library/Framework</p>
         <p className=" col-span-2 p-1">{project.mainProgram}</p>
 
@@ -111,7 +112,11 @@ const ProjectInfo = ({ project, evenOdd }: Props) => {
           href={project.url}
           rel="noopener noreferrer"
           target="_blank"
-        ></Link>
+          className=" project-visit-btn"
+        >
+          <FontAwesomeIcon icon={faPaperPlane} />
+          <p className="uppercase tracking-[2px]">Visit Website</p>
+        </Link>
       </div>
     </div>
   );

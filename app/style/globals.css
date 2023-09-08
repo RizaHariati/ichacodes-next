@@ -36,6 +36,9 @@
   .project-title {
     @apply flex gap-4 items-center justify-start p-2  px-5 border-b border-DrkBorder;
   }
+  .project-visit-btn {
+    @apply col-span-2 flex gap-2 w-full border border-accent bg-accent items-center text-white px-2 rounded-md h-10 hover:bg-fillLitSolid hover:text-accent hover:border-accent;
+  }
   /* ---------------------------- general --------------------------- */
   .main-layout {
     @apply h-full min-h-screen w-full relative bg-fillLit overflow-y-scroll scrollbar-thin snap-y snap-mandatory scroll-smooth;
