@@ -2,16 +2,19 @@ import Image from "next/image";
 import React from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { enterVariant, enterVariantChild } from "@/app/style/variants";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
 type Props = {
   scrollTop: boolean;
 };
 
 const Navbar = ({ scrollTop }: Props) => {
+  const router = useRouter();
   return (
     <div className="w-full h-screen  ">
       <div className=" w-full h-[85%] lg:max-w-[80%] mx-auto overflow-hidden flex flex-row relative z-10">
         {/* --------------------------- LOGO ATAS -------------------------- */}
-        <div className=" w-full absolute z-30">
+        <Link href="/" className=" w-full absolute z-30">
           <motion.div
             variants={enterVariant}
             initial="initial"
@@ -35,7 +38,7 @@ const Navbar = ({ scrollTop }: Props) => {
               Icha<span className="text-accent">Codes</span>
             </p>
           </motion.div>
-        </div>
+        </Link>
         {/* -------------------------- MENU KANAN -------------------------- */}
         <div className=" h-full w-44 py-14 absolute z-30 right-0 overflow-hidden">
           <motion.div
@@ -85,6 +88,7 @@ const Navbar = ({ scrollTop }: Props) => {
                 <h3> Linkedin</h3>
               </motion.button>
               <motion.button
+                onClick={() => router.push("/about")}
                 key="btn-3"
                 variants={enterVariantChild}
                 className="nav-btn group"

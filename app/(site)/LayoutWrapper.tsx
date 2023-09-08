@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Navbar from "../(tools)/components/NavbarComponents/Navbar";
+import Footer from "../(tools)/components/mainComponents/Footer";
 
 type Props = {
   children: React.ReactNode;
