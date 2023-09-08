@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Navbar from "../(tools)/components/NavbarComponents/Navbar";
 
 type Props = {
@@ -6,9 +7,20 @@ type Props = {
 };
 
 const LayoutWrapper = ({ children }: Props) => {
+  const [scrollTop, setScrollTop] = useState<boolean>(false);
   return (
-    <div className="main-layout">
-      <Navbar />
+    <div
+      className="main-layout"
+      onScroll={(e) => {
+        const top = e.currentTarget.scrollTop;
+        if (top > 100) {
+          setScrollTop(true);
+        } else {
+          setScrollTop(false);
+        }
+      }}
+    >
+      <Navbar scrollTop={scrollTop} />
       {children}
     </div>
   );

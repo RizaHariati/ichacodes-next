@@ -1,0 +1,13 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import "./globals.css";
+
+@layer components {
+  .nav-btn {
+    @apply bg-white active:bg-textLit flex items-center gap-2 w-full justify-between pr-2 rounded-sm opacity-100 hover:bg-opacity-60 active:text-black shadow-sm  shadow-textLit text-textDrk hover:text-textLit  p-1;
+  }
+  .nav-btn-img {
+    @apply h-10 w-10 overflow-hidden rounded-sm group-hover:opacity-60 active:opacity-0;
+  }
+}

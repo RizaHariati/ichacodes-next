@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *,
+  *::after,
+  *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+  }
+  body {
+    @apply text-textMed;
+  }
+  h1 {
+    @apply capitalize text-[40px] text-textDrk font-oswald font-semibold  !important;
+  }
+  h2 {
+    @apply text-[30px]  font-oswald font-normal !important;
+  }
+  h3 {
+    @apply text-[20px] font-poppins font-medium !important;
+  }
+  h4 {
+    @apply text-[18px] font-poppins font-normal !important;
+  }
+  h5 {
+    @apply text-lg font-poppins font-normal leading-6 !important;
+  }
+}
+
+@layer components {
+  /* ---------------------------- project ---------------------------- */
+  .project-title {
+    @apply flex gap-4 items-center justify-start p-2  px-5 border-b border-DrkBorder;
+  }
+  /* ---------------------------- general --------------------------- */
+  .main-layout {
+    @apply h-full min-h-screen w-full relative bg-fillLit overflow-y-scroll scrollbar-thin snap-y snap-mandatory scroll-smooth;
+  }
+  .transparant-button {
+    @apply border border-accent rounded-md p-1 h-8 w-36 text-center;
+  }
+}

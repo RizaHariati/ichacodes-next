@@ -2,11 +2,12 @@ import { ProjectType } from "@/types.d";
 
 export const projects: ProjectType[] = [
   {
-    index: 0,
     id: "IC001",
     url: "https://bayarPlanner.com/",
     title: "BayarPlanner",
     slug: "bayarplanner",
+    img_logo: "bayarplanner-logo",
+    main_image: "bayarplanner_monitor",
     description: [
       "BayarPlanner is a website that schedules and records daily financial transactions, also calculates data to create simple invoices.",
 
@@ -19,11 +20,30 @@ export const projects: ProjectType[] = [
       "Tailwind CSS,Typescript, useContext, useReducer, React datepicker",
   },
   {
-    index: 1,
     id: "IC002",
+
+    url: "https://rsuripsumoharjo-model.netlify.app/",
+    title: "RS Urip Sumoharjo",
+    slug: "rs-uripsumoharjo",
+    img_logo: "rs-uripsumoharjo-logo",
+    main_image: "rs-uripsumoharjo_monitor",
+    description: [
+      "A website design proposal for a local hospital in Bandar Lampung. The design wasn't approved by my client but I can keep it for my own portfolio",
+
+      "Inspired by Mayo Clinic's website. A very simple design, easy-to-use, informative but not too crowded with too many useless details.",
+
+      "The core of this website design is Next.JS, supported by Redux Toolkit, Formik, Yup, and React leaflet",
+    ],
+    mainProgram: "Next.js",
+    dependencies: "Typescript, Tailwind CSS, Redux Toolkit",
+  },
+  {
+    id: "IC003",
     url: "https://sudahnonton.ichacodes.com/",
     title: "SudahNonton",
     slug: "sudahnonton",
+    img_logo: "sudahnonton-logo",
+    main_image: "sudahnonton_monitor",
     description: [
       "SudahNonton is a movie and TV Shows database website that also serves as REST API provider that can be consumed by other websites or applications.",
 
@@ -36,28 +56,12 @@ export const projects: ProjectType[] = [
   },
 
   {
-    index: 2,
-    id: "IC003",
-
-    url: "https://rsuripsumoharjo-model.netlify.app/",
-    title: "RS Urip Sumoharjo",
-    slug: "rs-uripsumoharjo",
-    description: [
-      "A website design proposal for a local hospital in Bandar Lampung. The design wasn't approved by my client but I can keep it for my own portfolio",
-
-      "Inspired by Mayo Clinic's website. A very simple design, easy-to-use, informative but not too crowded with too many useless details.",
-
-      "The core of this website design is Next.JS, supported by Redux Toolkit, Formik, Yup, and React leaflet",
-    ],
-    mainProgram: "Next.js",
-    dependencies: "Typescript, Tailwind CSS, Redux Toolkit",
-  },
-  {
-    index: 3,
     id: "IC004",
     url: "https://azriclone.netlify.app/",
     title: "AzriClone",
     slug: "azriclone",
+    img_logo: "azriclone-logo",
+    main_image: "azriclone_monitor",
     description: [
       "This website is based on Facebook's website design, mainly to showcase my ability in accessing and processing data with Rest API.",
 
