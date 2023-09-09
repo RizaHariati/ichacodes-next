@@ -17,7 +17,7 @@ type Props = {
   evenOdd: "even" | "odd";
 };
 
-const Project = ({ project, evenOdd }: Props) => {
+const ProjectSection = ({ project, evenOdd }: Props) => {
   return (
     <section
       id={project.id}
@@ -28,7 +28,7 @@ const Project = ({ project, evenOdd }: Props) => {
         <TitleProject project={project} evenOdd={evenOdd} />
         <div className=" h-full w-full flex items-center justify-between ">
           <ProjectInfo project={project} evenOdd={evenOdd} />
-          <div className="h-full w-[55%] flex items-start justify-start overflow-hidden pb-16 ">
+          <div className="h-full w-[55%] flex items-start justify-start overflow-hidden pb-16 relative ">
             <motion.div
               variants={evenOdd === "even" ? enterImageRight : enterImageleft}
               initial="initial"
@@ -46,6 +46,23 @@ const Project = ({ project, evenOdd }: Props) => {
                 loading="lazy"
               />
             </motion.div>
+            <motion.button
+              variants={evenOdd === "even" ? enterImageRight : enterImageleft}
+              initial="initial"
+              whileInView="animate"
+              className="h-20 w-20  overflow-hidden absolute  z-20 bottom-32 right-20 "
+            >
+              <Image
+                rel="preload"
+                placeholder="empty"
+                src={`/images/icons/magnifying.png`}
+                width={50}
+                height={50}
+                className="h-20 w-20  object-covers object-center "
+                alt="magnifying"
+                loading="lazy"
+              />
+            </motion.button>
           </div>
         </div>
       </div>
@@ -54,7 +71,7 @@ const Project = ({ project, evenOdd }: Props) => {
   );
 };
 
-export default Project;
+export default ProjectSection;
 
 const TitleProject = ({ project, evenOdd }: Props) => {
   return (

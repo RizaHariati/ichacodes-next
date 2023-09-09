@@ -2,6 +2,7 @@
 
 import BackToTop from "@/app/(tools)/components/BackToTop";
 import AboutSection from "@/app/(tools)/components/aboutComponents/AboutSection";
+import SkillSection from "@/app/(tools)/components/aboutComponents/SkillSection";
 import Footer from "@/app/(tools)/components/mainComponents/Footer";
 
 export default function Home() {
@@ -9,7 +10,7 @@ export default function Home() {
     <main id="about-page" className="absolute w-full top-0 z-0">
       <BackToTop elementId="about-page" />
       <AboutSection />
-
+      <SkillSection />
       <Footer />
     </main>
   );

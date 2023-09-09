@@ -1,0 +1,200 @@
+[
+    {
+        "id": "skill-01",
+        "category": "front end",
+        "skills": [
+            {
+                "id-cat": "fe-001",
+                "title": "JavaScript",
+                "frequency": "all the time",
+                "level": "80%",
+                "img": "javascript"
+            },
+            {
+                "id-cat": "fe-002",
+                "title": "TypeScript",
+                "frequency": "all the time",
+                "level": "75%",
+                "img": "typescript"
+            },
+            {
+                "id-cat": "fe-003",
+                "title": "React.JS",
+                "frequency": "all the time",
+                "level": "85%",
+                "img": "react"
+            },
+            {
+                "id-cat": "fe-004",
+                "title": "React Native",
+                "frequency": "rarely",
+                "level": "55%",
+                "img": "reactnative"
+            },
+            {
+                "id-cat": "fe-005",
+                "title": "Gatsby.JS",
+                "frequency": "often",
+                "level": "70%",
+                "img": "gatsby"
+            },
+            {
+                "id-cat": "fe-006",
+                "title": "Next.JS",
+                "frequency": "often",
+                "level": "70%",
+                "img": "nextjs"
+            },
+            {
+                "id-cat": "fe-007",
+                "title": "Java",
+                "frequency": "rarely",
+                "level": "30%",
+                "img": "java"
+            }
+        ]
+    },
+    {
+        "id": "skill-02",
+        "category": "back end",
+        "skills": [
+            {
+                "id-cat": "be-001",
+                "title": "Node.js",
+                "frequency": "rarely",
+                "level": "40%",
+                "img": "nodejs"
+            },
+            {
+                "id-cat": "be-002",
+                "title": "Express.js",
+                "frequency": "rarely",
+                "level": "40%",
+                "img": "expressjs"
+            },
+            {
+                "id-cat": "be-003",
+                "title": "Laravel",
+                "frequency": "rarely",
+                "level": "60%",
+                "img": "laravel"
+            },
+            {
+                "id-cat": "be-004",
+                "title": "MySQL",
+                "frequency": "rarely",
+                "level": "45%",
+                "img": "mysql"
+            },
+            {
+                "id-cat": "be-005",
+                "title": "Sanity.IO",
+                "frequency": "often",
+                "level": "60%",
+                "img": "sanity"
+            },
+            {
+                "id-cat": "be-006",
+                "title": "Contentful",
+                "frequency": "often",
+                "level": "70%",
+                "img": "contentful"
+            },
+            {
+                "id-cat": "be-007",
+                "title": "MongoDB",
+                "frequency": "rarely",
+                "level": "50%",
+                "img": "mongodb"
+            }
+        ]
+    },
+    {
+        "id": "skill-03",
+        "category": "Design Tools",
+        "skills": [
+            {
+                "id-cat": "ds-001",
+                "title": "TailwindCSS",
+                "frequency": "all the time",
+                "level": "85%",
+                "img": "tailwind"
+            },
+            {
+                "id-cat": "ds-002",
+                "title": "Bootstrap",
+                "frequency": "rarely",
+                "level": "70%",
+                "img": "bootstrap"
+            },
+            {
+                "id-cat": "ds-003",
+                "title": "Material-UI",
+                "frequency": "rarely",
+                "level": "60%",
+                "img": "mui"
+            },
+            {
+                "id-cat": "ds-004",
+                "title": "Figma",
+                "frequency": "rarely",
+                "level": "65%",
+                "img": "figma"
+            },
+            {
+                "id-cat": "ds-005",
+                "title": "Photoshop",
+                "frequency": "often",
+                "level": "80%",
+                "img": "photoshop"
+            },
+            {
+                "id-cat": "ds-006",
+                "title": "3DsMax",
+                "frequency": "rarely",
+                "level": "90%",
+                "img": "autodesk"
+            },
+            {
+                "id-cat": "ds-007",
+                "title": "SkethUp",
+                "frequency": "rarely",
+                "level": "80%",
+                "img": "sketchup"
+            }
+        ]
+    },
+    {
+        "id": "skill-04",
+        "category": "Testing Tools",
+        "skills": [
+            {
+                "id-cat": "ds-001",
+                "title": "Cypress.IO",
+                "frequency": "rarely",
+                "level": "55%",
+                "img": "cypress"
+            }
+        ]
+    },
+    {
+        "id": "skill-05",
+        "category": "Other skills",
+        "skills": [
+            {
+                "id-cat": "ot-001",
+                "title": "Writing",
+                "frequency": "all the time",
+                "level": "90%",
+                "img": "cypress"
+            },
+            {
+                "id-cat": "ot-002",
+                "title": "Mandarin",
+                "frequency": "rarely",
+                "level": "60%",
+                "img": "cypress"
+            }
+        ]
+    }
+]

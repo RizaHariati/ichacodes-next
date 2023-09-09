@@ -1,10 +1,10 @@
 "use client";
 
 import { projects } from "../(tools)/data/data";
-import Project from "../(tools)/components/mainComponents/Project";
 import HeroSection from "../(tools)/components/mainComponents/HeroSection";
 import Footer from "../(tools)/components/mainComponents/Footer";
 import BackToTop from "../(tools)/components/BackToTop";
+import ProjectSection from "../(tools)/components/mainComponents/ProjectSection";
 
 export default function Home() {
   return (
@@ -13,7 +13,7 @@ export default function Home() {
       <HeroSection />
       {projects.map((project, index: number) => {
         return (
-          <Project
+          <ProjectSection
             key={project.id}
             project={project}
             evenOdd={index % 2 === 0 ? "even" : "odd"}

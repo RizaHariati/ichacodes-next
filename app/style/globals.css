@@ -15,7 +15,7 @@
     @apply text-textMed;
   }
   h1 {
-    @apply capitalize text-[40px] text-textDrk font-oswald font-semibold  !important;
+    @apply capitalize text-[40px] text-textDrk font-oswald font-medium  !important;
   }
   h2 {
     @apply text-[30px]  font-oswald font-normal !important;
@@ -24,7 +24,7 @@
     @apply text-[20px] font-poppins font-medium !important;
   }
   h4 {
-    @apply text-[18px] font-poppins font-normal !important;
+    @apply text-[20px] font-oswald font-normal !important;
   }
   h5 {
     @apply text-lg font-poppins font-normal leading-6 !important;
