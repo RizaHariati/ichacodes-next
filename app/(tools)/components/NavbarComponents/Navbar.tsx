@@ -4,11 +4,9 @@ import { AnimatePresence, motion } from "framer-motion";
 import { enterVariant, enterVariantChild } from "@/app/style/variants";
 import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
-type Props = {
-  scrollTop: boolean;
-};
+type Props = {};
 
-const Navbar = ({ scrollTop }: Props) => {
+const Navbar = (props: Props) => {
   const router = useRouter();
   const pathname = usePathname();
   return (

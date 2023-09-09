@@ -1,11 +1,13 @@
-"use client";
-
 import { projects } from "../(tools)/data/data";
 import HeroSection from "../(tools)/components/mainComponents/HeroSection";
 import Footer from "../(tools)/components/mainComponents/Footer";
 import BackToTop from "../(tools)/components/BackToTop";
 import ProjectSection from "../(tools)/components/mainComponents/ProjectSection";
+import { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: "Home",
+};
 export default function Home() {
   return (
     <main id="main-page" className="absolute w-full top-0 z-0">

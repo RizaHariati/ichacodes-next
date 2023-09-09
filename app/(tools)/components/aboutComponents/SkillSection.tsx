@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { BorderStraight } from "../Borders";
 import dataskill from "../../data/dataskill.json";
@@ -51,7 +52,10 @@ const SkillSection = (props: Props) => {
                   <div className="flex w-full items-center ">
                     {item.skills.map((skillitem) => {
                       return (
-                        <div className="flex flex-col items-center justify-center px-5 gap-1 p-2">
+                        <div
+                          className="flex flex-col items-center justify-center px-5 gap-1 p-2"
+                          key={skillitem["id-cat"]}
+                        >
                           <div
                             key={skillitem["id-cat"]}
                             className=" relative w-12 h-12 group "
@@ -68,8 +72,8 @@ const SkillSection = (props: Props) => {
                                 loading="lazy"
                               />
                             </div>
-                            <div className="absolute text-center hidden group-hover:block opacity-0 group-hover:opacity-100  left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 text-white font-poppins transition-all cursor-pointer leading-5">
-                              <p className="capitalized text-sm">
+                            <div className="absolute text-center  group-hover:block opacity-0 group-hover:opacity-100  left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 text-white font-poppins transition-all cursor-pointer leading-5   delay-200">
+                              <p className="capitalized text-sm opacity-0 group-hover:opacity-100 transition-all">
                                 {skillitem.title}
                               </p>
                               <p className="font-thin text-xs">used :</p>

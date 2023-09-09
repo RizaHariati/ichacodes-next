@@ -1,7 +1,26 @@
-export const enterOpacity = {
+export const enterOpacityLeft = {
   initial: { opacity: 0, x: "-50%" },
   animate: {
     x: "0%",
+    opacity: 1,
+
+    transition: {
+      duration: 0.5,
+      stiffness: 30,
+    },
+  },
+  exit: {
+    opacity: 0,
+    transition: {
+      duration: 0.5,
+      stiffness: 30,
+    },
+  },
+};
+
+export const enterOpacity = {
+  initial: { opacity: 0 },
+  animate: {
     opacity: 1,
 
     transition: {
@@ -58,21 +77,21 @@ export const enterTitleVariants = {
 };
 
 export const enterImageleft = {
-  initial: { x: "-100%", opacity: 0 },
+  initial: { x: "-50%", opacity: 0 },
   animate: {
     x: "0%",
     opacity: 1,
-    transition: { duration: 1, type: "spring", stiffness: 50 },
+    transition: { duration: 1, type: "spring", stiffness: 30 },
   },
   exit: { x: "-50%" },
 };
 
 export const enterImageRight = {
-  initial: { x: "100%", opacity: 0 },
+  initial: { x: "50%", opacity: 0 },
   animate: {
     x: "0%",
     opacity: 1,
-    transition: { duration: 1, type: "spring", stiffness: 50 },
+    transition: { duration: 1, type: "spring", stiffness: 30 },
   },
   exit: { x: "-50%" },
 };

@@ -46,4 +46,11 @@
   .transparant-button {
     @apply border border-accent rounded-md p-1 h-8 w-36 text-center;
   }
+  .modal-bg {
+    @apply fixed bg-black h-screen w-full z-20 bg-opacity-50 transition-all;
+  }
+
+  .modal {
+    @apply absolute w-full max-w-[80%] h-[90%] bg-fillLitSolid rounded-lg z-30 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 transition-all;
+  }
 }

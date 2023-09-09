@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { BorderStraight } from "../Borders";
 import { ProjectType } from "@/types.d";
@@ -11,6 +12,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaperPlane } from "@fortawesome/free-regular-svg-icons";
+import { useGlobalContext } from "../../context/AppProvider";
 
 type Props = {
   project: ProjectType;
@@ -18,6 +20,7 @@ type Props = {
 };
 
 const ProjectSection = ({ project, evenOdd }: Props) => {
+  const { openModal } = useGlobalContext();
   return (
     <section
       id={project.id}
@@ -33,6 +36,7 @@ const ProjectSection = ({ project, evenOdd }: Props) => {
               variants={evenOdd === "even" ? enterImageRight : enterImageleft}
               initial="initial"
               whileInView="animate"
+              viewport={{ once: true }}
               className="h-full w-full overflow-hidden "
             >
               <Image
@@ -47,6 +51,7 @@ const ProjectSection = ({ project, evenOdd }: Props) => {
               />
             </motion.div>
             <motion.button
+              onClick={() => openModal(project)}
               variants={evenOdd === "even" ? enterImageRight : enterImageleft}
               initial="initial"
               whileInView="animate"
@@ -58,7 +63,7 @@ const ProjectSection = ({ project, evenOdd }: Props) => {
                 src={`/images/icons/magnifying.png`}
                 width={50}
                 height={50}
-                className="h-20 w-20  object-covers object-center "
+                className="h-20 w-20  object-covers object-center"
                 alt="magnifying"
                 loading="lazy"
               />
@@ -73,7 +78,7 @@ const ProjectSection = ({ project, evenOdd }: Props) => {
 
 export default ProjectSection;
 
-const TitleProject = ({ project, evenOdd }: Props) => {
+export const TitleProject = ({ project, evenOdd }: Props) => {
   return (
     <motion.div
       className={
@@ -131,7 +136,7 @@ const ProjectInfo = ({ project, evenOdd }: Props) => {
           target="_blank"
           className=" project-visit-btn"
         >
-          <FontAwesomeIcon icon={faPaperPlane} />
+          <FontAwesomeIcon icon={faPaperPlane} className="h-6" />
           <p className="uppercase tracking-[2px]">Visit Website</p>
         </Link>
       </div>

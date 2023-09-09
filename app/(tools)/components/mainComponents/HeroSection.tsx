@@ -34,9 +34,9 @@ const HeroSection = (props: Props) => {
                 I build website and apps (mainly) using React.JS
               </h2>
               <h5>
-                Whether it's for personal purpose or for small business, it will
-                be my pleasure to create interesting reliable websites and apps
-                that reflect your goals and personality.
+                Whether it&apos;s for personal purpose or for small business, it
+                will be my pleasure to create interesting reliable websites and
+                apps that reflect your goals and personality.
               </h5>
             </div>
           </div>
