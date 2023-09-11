@@ -81,7 +81,13 @@ export const enterImageleft = {
   animate: {
     x: "0%",
     opacity: 1,
-    transition: { duration: 1, type: "spring", stiffness: 30 },
+    transition: {
+      when: "beforeChildren",
+      duration: 1,
+      type: "spring",
+      stiffness: 30,
+      staggerChildren: 0.2,
+    },
   },
   exit: { x: "-50%" },
 };
@@ -91,7 +97,13 @@ export const enterImageRight = {
   animate: {
     x: "0%",
     opacity: 1,
-    transition: { duration: 1, type: "spring", stiffness: 30 },
+    transition: {
+      when: "beforeChildren",
+      duration: 1,
+      type: "spring",
+      stiffness: 30,
+      staggerChildren: 0.2,
+    },
   },
   exit: { x: "-50%" },
 };

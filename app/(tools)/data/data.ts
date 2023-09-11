@@ -2,6 +2,7 @@ import { ProjectType } from "@/types.d";
 
 export const projects: ProjectType[] = [
   {
+    project_index: 1,
     id: "IC001",
     url: "https://bayarPlanner.com/",
     title: "BayarPlanner",
@@ -17,9 +18,10 @@ export const projects: ProjectType[] = [
       "The main calendar design is costume-made so it can have more flexibility to handle different functions accordingly to different activities each day.",
     ],
     mainProgram: "React.js",
-    dependencies: "Typescript,Tailwind CSS, React datepicker",
+    dependencies: "Typescript,Tailwind CSS, ReactDatepicker",
   },
   {
+    project_index: 2,
     id: "IC002",
     url: "https://rsuripsumoharjo-model.netlify.app/",
     title: "RS Urip Sumoharjo",
@@ -28,16 +30,17 @@ export const projects: ProjectType[] = [
     main_image: "rs-uripsumoharjo_monitor",
     modal_image: "rs-uripsumoharjo_screenPhone",
     description: [
-      "A website design proposal for a local hospital in Bandar Lampung. The design wasn't approved by my client but I can keep it for my own portfolio",
+      "A website design proposal for a local hospital in Bandar Lampung. The design wasn't approved by my client but I can keep it for my own portfolio.",
 
-      "A very simple design, easy-to-use, informative but not too crowded with too many useless details.",
+      "The design is very simple, easy-to-use, informative but not too crowded with too many useless details.",
 
-      "The core of this website design is to create practical online appointment and medical record integration",
+      "The core of this website design is to create practical online appointment and medical record integration.",
     ],
     mainProgram: "Next.js",
-    dependencies: "Typescript, React DatePicker, Framer Motion",
+    dependencies: " ReactDatePicker, FramerMotion",
   },
   {
+    project_index: 3,
     id: "IC003",
     url: "https://sudahnonton.ichacodes.com/",
     title: "SudahNonton",
@@ -57,6 +60,7 @@ export const projects: ProjectType[] = [
   },
 
   {
+    project_index: 4,
     id: "IC004",
     url: "https://azriclone.netlify.app/",
     title: "AzriClone",

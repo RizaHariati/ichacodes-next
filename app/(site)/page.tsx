@@ -18,7 +18,7 @@ export default function Home() {
           <ProjectSection
             key={project.id}
             project={project}
-            evenOdd={index % 2 === 0 ? "even" : "odd"}
+            evenOdd={project.project_index % 2 === 0 ? "even" : "odd"}
           />
         );
       })}

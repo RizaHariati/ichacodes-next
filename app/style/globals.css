@@ -44,10 +44,10 @@
     @apply flex gap-4 items-center justify-start p-2  px-5 border-b border-DrkBorder;
   }
   .project-visit-btn {
-    @apply col-span-2 flex items-center justify-center gap-2 w-full border border-accent bg-accent  text-white px-2 rounded-md h-10 hover:bg-fillLitSolid hover:text-accent hover:border-accent;
+    @apply col-span-2 md:col-span-3 flex items-center justify-center gap-3 w-full border border-accent bg-accent  text-white px-2 rounded-md h-10 hover:bg-fillLitSolid hover:text-accent hover:border-accent;
   }
   .project-info {
-    @apply h-full  row-span-2 p-5 pb-[15%] flex justify-between items-center;
+    @apply h-full w-full md:row-start-2  row-span-2 p-5 pb-[20%] pt-0 flex flex-col justify-between items-center;
   }
   /* ---------------------------- general --------------------------- */
   .main-layout {

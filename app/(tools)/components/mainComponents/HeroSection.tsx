@@ -1,7 +1,8 @@
 "use client";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { enterVariantChild } from "@/app/style/variants";
+import { enterImageleft, enterVariantChild } from "@/app/style/variants";
+import { BorderIntro } from "../Borders";
 
 type Props = {};
 
@@ -11,11 +12,11 @@ const HeroSection = (props: Props) => {
       <div className="h-full  panel-width bg-fillLitSolid mx-auto rounded-b-lg shadow-sm relative overflow-hidden">
         <div className="grid grid-cols-1 md:grid-cols-7 pr-20 lg:pr-48 h-full">
           <motion.div
-            variants={enterVariantChild}
+            variants={enterImageleft}
             initial="initial"
             whileInView="animate"
             viewport={{ once: true }}
-            className="h-full w-full overflow-hidden col-span-2 relative pt-14"
+            className="h-full w-full  overflow-hidden col-span-2 relative pt-14  shadow-sm md:shadow-none shadow-textLit"
           >
             <Image
               priority
@@ -23,7 +24,7 @@ const HeroSection = (props: Props) => {
               width={350}
               src="/images/profile_pic.jpg"
               alt="main image"
-              className=" md:object-center object-top object-cover w-full h-auto md:w-auto md:h-full 2xl:h-[80%] absolute bottom-1/2 translate-y-1/2 2xl:rounded-r-lg shadow-sm"
+              className=" object-center object-cover w-full h-auto md:w-auto md:h-full 2xl:h-[80%] absolute bottom-1/2 translate-y-1/2 2xl:rounded-r-lg"
             />
           </motion.div>
 
@@ -42,15 +43,7 @@ const HeroSection = (props: Props) => {
           </div>
         </div>
       </div>
-      <div className="h-44 panel-width mx-auto grid grid-cols-4 items-center ">
-        <p className="text-textDrk font-oswald  text-[20px] md:text-[30px] tracking-0 md:tracking-[2px] text-right w-full  animate-pulse pr-3 h-1/2">
-          My experiments
-        </p>
-        <div className="flex flex-col h-full">
-          <div className="  h-full"></div>
-          <div className="  w-full h-full border-t-2 border-r-2 rounded-tr-lg border-DrkBorder"></div>
-        </div>
-      </div>
+      <BorderIntro text="My Experiment" />
     </section>
   );
 };

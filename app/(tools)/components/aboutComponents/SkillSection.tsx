@@ -10,7 +10,7 @@ const SkillSection = (props: Props) => {
   return (
     <section
       id="skillSection"
-      className="w-full h-screen bg-fillLit flex flex-col snap-center"
+      className="w-full h-screen bg-fillLit flex flex-col"
     >
       <BorderStraightTop />
       <div className="h-full w-full panel-width mx-auto bg-fillLitSolid rounded-lg overflow-hidden p-10">

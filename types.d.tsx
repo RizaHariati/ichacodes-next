@@ -1,4 +1,5 @@
 export type ProjectType = {
+  project_index: number;
   id: string;
   url: string;
   title: string;

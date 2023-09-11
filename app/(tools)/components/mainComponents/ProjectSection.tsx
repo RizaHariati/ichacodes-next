@@ -7,8 +7,9 @@ import {
   enterTitleVariants,
   enterImageleft,
   enterImageRight,
+  enterOpacity,
 } from "@/app/style/variants";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaperPlane } from "@fortawesome/free-regular-svg-icons";
@@ -30,45 +31,47 @@ const ProjectSection = ({ project, evenOdd }: Props) => {
       <div className="h-full panel-width mx-auto bg-fillLitSolid rounded-lg  overflow-hidden">
         <TitleProject project={project} evenOdd={evenOdd} />
         <div className=" h-full w-full grid grid-cols-1 grid-rows-3 md:grid-cols-2 ">
-          <ProjectInfo project={project} evenOdd={evenOdd} />
-          <div className="h-full flex items-start justify-start overflow-hidden pb-0  md:pb-16 relative ">
-            <motion.div
-              variants={evenOdd === "even" ? enterImageRight : enterImageleft}
-              initial="initial"
-              whileInView="animate"
-              viewport={{ once: true }}
-              className="h-full overflow-hidden  relative mx-auto"
-            >
-              <Image
-                rel="preload"
-                placeholder="empty"
-                src={`/images/projects/${project.slug}/${project.main_image}.jpg`}
-                width={900}
-                height={700}
-                className="h-full w-auto md:w-full md:h-auto mx-auto object-covers object-center bg-white "
-                alt={project.main_image}
-                loading="lazy"
-              />
-              <motion.button
-                onClick={() => openModal(project)}
+          <div className="h-full md:row-span-2 flex items-start justify-start overflow-hidden relative ">
+            <AnimatePresence>
+              <motion.div
+                key={project.id}
                 variants={evenOdd === "even" ? enterImageRight : enterImageleft}
                 initial="initial"
                 whileInView="animate"
-                className=" h-12 w-12 md:h-20 md:w-20  overflow-hidden absolute  z-20 bottom-[5%]  right-[5%] "
+                exit="exit"
+                viewport={{ once: true }}
+                className="h-full overflow-hidden  relative mx-auto"
               >
                 <Image
                   rel="preload"
                   placeholder="empty"
-                  src={`/images/icons/magnifying.png`}
-                  width={50}
-                  height={50}
-                  className="h-full w-auto  object-covers object-center"
-                  alt="magnifying"
+                  src={`/images/projects/${project.slug}/${project.main_image}.jpg`}
+                  width={800}
+                  height={700}
+                  className="h-full w-auto  mx-auto object-covers object-center bg-white "
+                  alt={project.main_image}
                   loading="lazy"
                 />
-              </motion.button>
-            </motion.div>
+                <motion.button
+                  variants={enterOpacity}
+                  onClick={() => openModal(project)}
+                  className=" h-12 w-12 md:h-16 md:w-16  overflow-hidden absolute  z-20 bottom-[5%] right-[5%] "
+                >
+                  <Image
+                    rel="preload"
+                    placeholder="empty"
+                    src={`/images/icons/magnifying.png`}
+                    width={50}
+                    height={50}
+                    className="h-full w-auto  object-covers object-center"
+                    alt="magnifying"
+                    loading="lazy"
+                  />
+                </motion.button>
+              </motion.div>
+            </AnimatePresence>
           </div>
+          <ProjectInfo project={project} evenOdd={evenOdd} />
         </div>
       </div>
       <BorderStraightBottom />
@@ -116,38 +119,34 @@ const ProjectInfo = ({ project, evenOdd }: Props) => {
   return (
     <div
       className={
-        evenOdd === "even"
-          ? "  project-info order-1  md:order-0 "
-          : " project-info  order-1  "
+        evenOdd === "even" ? "  project-info  md:col-start-2 " : " project-info"
       }
     >
-      <div className="mb-auto">
-        <div className="leading-5 2xl:text-xl">
-          {project.description.map((item, index) => {
-            return <p key={index}>{item}</p>;
-          })}
-        </div>
-        <div className="grid grid-cols-2 md:grid-cols-3 w-full gap-2 mt-2 2xl:text-xl">
-          <p className="transparant-button">Library/Framework</p>
-          <p className=" md:col-span-2 p-1 text-small-kit">
-            {project.mainProgram}
-          </p>
+      <div className="leading-5 2xl:text-xl">
+        {project.description.map((item, index) => {
+          return <p key={index}>{item}</p>;
+        })}
+      </div>
+      <div className="grid grid-cols-2 md:grid-cols-3 w-full gap-2 2xl:text-xl">
+        <p className="transparant-button">Library/Framework</p>
+        <p className=" md:col-span-2 p-1 text-small-kit">
+          {project.mainProgram}
+        </p>
 
-          <p className="transparant-button">Dependencies</p>
-          <p className=" md:col-span-2 p-1 text-small-kit">
-            {project.dependencies}
-          </p>
+        <p className="transparant-button">Dependencies</p>
+        <p className=" md:col-span-2 p-1 text-small-kit">
+          {project.dependencies}
+        </p>
 
-          <Link
-            href={project.url}
-            rel="noopener noreferrer"
-            target="_blank"
-            className=" project-visit-btn"
-          >
-            <FontAwesomeIcon icon={faPaperPlane} className="h-6" />
-            <p className="uppercase tracking-[2px] ">Visit Website</p>
-          </Link>
-        </div>
+        <Link
+          href={project.url}
+          rel="noopener noreferrer"
+          target="_blank"
+          className=" project-visit-btn"
+        >
+          <FontAwesomeIcon icon={faPaperPlane} className="h-6" />
+          <p className="uppercase tracking-[2px] ">Visit Website</p>
+        </Link>
       </div>
     </div>
   );
