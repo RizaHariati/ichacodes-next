@@ -11,7 +11,7 @@ const Navbar = (props: Props) => {
   const pathname = usePathname();
   return (
     <div className="w-full h-screen  ">
-      <div className=" h-[85%] panel-width mx-auto overflow-hidden flex flex-row relative z-10">
+      <div className=" h-[45%] md:h-[80%] panel-width mx-auto overflow-hidden flex flex-row z-10 ">
         {/* --------------------------- LOGO ATAS -------------------------- */}
 
         <motion.div
@@ -20,7 +20,7 @@ const Navbar = (props: Props) => {
           initial="initial"
           whileInView="animate"
           exit="exit"
-          className=" w-full absolute z-30"
+          className=" w-full z-30"
         >
           <Link href="/" className="flex items-center gap-2 p-2  ">
             <div className="w-10 h-10 rounded-full overflow-hidden shadow-sm ">
@@ -41,14 +41,14 @@ const Navbar = (props: Props) => {
           </Link>
         </motion.div>
         {/* -------------------------- MENU KANAN -------------------------- */}
-        <div className=" h-full w-16 lg:w-44 py-14 2xl:py-24 absolute z-30 right-0 overflow-hidden">
+        <div className=" h-full w-[72px] lg:w-44 py-0 md:py-14 2xl:py-24 z-30  overflow-hidden">
           <motion.div
             key={pathname + "button"}
             variants={enterVariant}
             viewport={{ once: true }}
             initial="initial"
             whileInView="animate"
-            className=" h-full right-0 flex flex-col items-end gap-2 border-l-2 border-accent pl-5 pt-5 "
+            className=" h-full flex flex-col items-end gap-2 border-l-2 border-accent pl-5 pt-5 "
           >
             <motion.button
               key="btn-1"

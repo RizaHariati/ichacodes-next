@@ -48,7 +48,7 @@ const ProjectSection = ({ project, evenOdd }: Props) => {
                   src={`/images/projects/${project.slug}/${project.main_image}.jpg`}
                   width={800}
                   height={700}
-                  className="h-full w-auto  mx-auto object-covers object-center bg-white "
+                  className="h-full w-auto  mx-auto object-covers object-center  "
                   alt={project.main_image}
                   loading="lazy"
                 />

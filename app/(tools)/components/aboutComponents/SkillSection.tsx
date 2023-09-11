@@ -10,24 +10,23 @@ const SkillSection = (props: Props) => {
   return (
     <section
       id="skillSection"
-      className="w-full h-screen bg-fillLit flex flex-col"
+      className="w-full h-fit bg-fillLit flex flex-col"
     >
-      <BorderStraightTop />
-      <div className="h-full w-full panel-width mx-auto bg-fillLitSolid rounded-lg overflow-hidden p-10">
+      <div className="h-full w-full panel-width mx-auto bg-fillLitSolid rounded-lg  p-5 md:p-10">
         <div className=" h-full w-full flex flex-col items-center justify-start gap-2">
           {dataskill.map((item) => {
             if (item.id === "skill-05") {
               return (
                 <div
                   key={item.id}
-                  className="flex items-center h-24 w-full bg-fillLit bg-opacity-30 rounded-md gap-2"
+                  className="grid grid-cols-3 2xl:grid-cols-9 h-fit w-full bg-fillLit bg-opacity-30 rounded-md gap-2"
                 >
-                  <div className="w-44 h-full border-r border-white p-2">
+                  <div className="w-full h-full border-b border-white p-2 col-span-3 2xl:border-b-0 2xl:border-r">
                     <p className="capitalize text-[25px] font-oswald">
                       {item.category}
                     </p>
                   </div>
-                  <div className="flex w-full items-center  px-5">
+                  <div className=" col-span-7 w-full items-center  p-5">
                     <p>
                       Write short articles, and do presentations using Canva and
                       PowerPoint. Speak and write in Bahasa Indonesia, English,
@@ -42,14 +41,14 @@ const SkillSection = (props: Props) => {
               return (
                 <div
                   key={item.id}
-                  className="flex items-center h-24 w-full bg-fillLit bg-opacity-30 rounded-md gap-2"
+                  className="grid grid-cols-2 2xl:grid-cols-9 h-fit w-full bg-fillLit bg-opacity-30 rounded-md gap-2 "
                 >
-                  <div className="w-44 h-full border-r border-white p-2">
-                    <p className="capitalize text-[25px] font-oswald">
+                  <div className="w-full h-full border-b border-white p-2 col-span-2 2xl:border-b-0 2xl:border-r">
+                    <p className="capitalize text-[25px]  font-oswald">
                       {item.category}
                     </p>
                   </div>
-                  <div className="flex w-full items-center ">
+                  <div className="col-span-2 2xl:col-span-7 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 w-full items-center p-2  ">
                     {item.skills.map((skillitem) => {
                       return (
                         <div
@@ -60,7 +59,7 @@ const SkillSection = (props: Props) => {
                             key={skillitem["id-cat"]}
                             className=" relative w-12 h-12 group "
                           >
-                            <div className="absolute w-12 group-hover:w-24 aspect-square rounded-full overflow-hidden left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 cursor-pointer bg-black transition-all ">
+                            <div className="absolute w-12 group-hover:w-28 aspect-square rounded-full overflow-hidden left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 cursor-pointer bg-black transition-all z-10 hover:z-20 ">
                               <Image
                                 rel="preload"
                                 placeholder="empty"
@@ -72,7 +71,7 @@ const SkillSection = (props: Props) => {
                                 loading="lazy"
                               />
                             </div>
-                            <div className="absolute text-center  group-hover:block opacity-0 group-hover:opacity-100  left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 text-white font-poppins transition-all cursor-pointer leading-5   delay-200">
+                            <div className="absolute text-center  group-hover:block opacity-0 group-hover:opacity-100  left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 text-white font-poppins transition-all cursor-pointer leading-5   delay-200 z-40">
                               <p className="capitalized text-sm opacity-0 group-hover:opacity-100 transition-all">
                                 {skillitem.title}
                               </p>
