@@ -44,7 +44,7 @@ export const enterVariant = {
     transition: {
       when: "beforeChildren",
       duration: 0.1,
-      staggerChildren: 0.1,
+      staggerChildren: 0.2,
       type: "spring",
       stiffness: 30,
     },
@@ -57,15 +57,15 @@ export const enterVariantChild = {
   animate: {
     x: "0%",
     opacity: 1,
-    transition: { duration: 1, type: "spring", stiffness: 50 },
+    transition: { duration: 0.2, type: "spring", stiffness: 50 },
   },
   exit: { x: "-50%" },
 };
 
 export const enterTitleVariants = {
-  initial: { letterSpacing: "20px", opacity: 0.5 },
+  initial: { letterSpacing: "20px", opacity: 0 },
   animate: {
-    letterSpacing: "15px",
+    letterSpacing: "10px",
     opacity: 1,
     transition: {
       duration: 1,

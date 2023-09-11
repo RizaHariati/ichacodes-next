@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { BorderStraight } from "../Borders";
+import { BorderStraightBottom, BorderStraightTop } from "../Borders";
 import dataskill from "../../data/dataskill.json";
 import Image from "next/image";
 
@@ -12,8 +12,8 @@ const SkillSection = (props: Props) => {
       id="skillSection"
       className="w-full h-screen bg-fillLit flex flex-col snap-center"
     >
-      <BorderStraight />
-      <div className="h-full w-full lg:max-w-[80%] mx-auto bg-fillLitSolid rounded-lg overflow-hidden p-10">
+      <BorderStraightTop />
+      <div className="h-full w-full panel-width mx-auto bg-fillLitSolid rounded-lg overflow-hidden p-10">
         <div className=" h-full w-full flex flex-col items-center justify-start gap-2">
           {dataskill.map((item) => {
             if (item.id === "skill-05") {
@@ -99,7 +99,7 @@ const SkillSection = (props: Props) => {
         </div>
       </div>
 
-      <BorderStraight />
+      <BorderStraightBottom />
     </section>
   );
 };

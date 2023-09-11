@@ -17,12 +17,10 @@ export const projects: ProjectType[] = [
       "The main calendar design is costume-made so it can have more flexibility to handle different functions accordingly to different activities each day.",
     ],
     mainProgram: "React.js",
-    dependencies:
-      "Tailwind CSS,Typescript, useContext, useReducer, React datepicker",
+    dependencies: "Typescript,Tailwind CSS, React datepicker",
   },
   {
     id: "IC002",
-
     url: "https://rsuripsumoharjo-model.netlify.app/",
     title: "RS Urip Sumoharjo",
     slug: "rs-uripsumoharjo",
@@ -32,12 +30,12 @@ export const projects: ProjectType[] = [
     description: [
       "A website design proposal for a local hospital in Bandar Lampung. The design wasn't approved by my client but I can keep it for my own portfolio",
 
-      "Inspired by Mayo Clinic's website. A very simple design, easy-to-use, informative but not too crowded with too many useless details.",
+      "A very simple design, easy-to-use, informative but not too crowded with too many useless details.",
 
-      "The core of this website design is Next.JS, supported by Redux Toolkit, Formik, Yup, and React leaflet",
+      "The core of this website design is to create practical online appointment and medical record integration",
     ],
     mainProgram: "Next.js",
-    dependencies: "Typescript, Tailwind CSS, Redux Toolkit",
+    dependencies: "Typescript, React DatePicker, Framer Motion",
   },
   {
     id: "IC003",
@@ -55,7 +53,7 @@ export const projects: ProjectType[] = [
       "I watched and I like all of the movies and TV shows in this website, so it also can be used as recommendation for movie night ",
     ],
     mainProgram: "Laravel 8",
-    dependencies: "Laravel-mix, Bootstrap, Axios, Sass",
+    dependencies: "Laravel-mix, Bootstrap, Axios",
   },
 
   {
@@ -77,16 +75,3 @@ export const projects: ProjectType[] = [
     dependencies: "Tailwind CSS, Redux Toolkit, Redux Persist",
   },
 ];
-
-export const aboutData = {
-  message:
-    "I mostly work on Front End Developing, from designing to testing to deployment. I also dabble on the Back End creating simple CRUD data. Designing apps and websites that are custom-made to your need is my interest. My favorite programming tool is React.JS, but I also enjoy working with Laravel.",
-
-  frontEnd:
-    "Javascript/Css/Html, TypeScript, Java, React.JS, React Native, Gatsby.JS, Next.JS",
-
-  backEnd: "Node.JS, Express.JS, Laravel 8, MySQL, Mongodb",
-  testing: "Cypress",
-  design:
-    "Photoshop, Material-UI, Tailwinds CSS, Bootstrap, Figma, Sketchup, 3dsMax, AutoCAD",
-};

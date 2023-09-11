@@ -10,47 +10,57 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
+    scroll-behavior: smooth;
   }
   body {
     @apply text-textMed;
   }
   h1 {
-    @apply capitalize text-[40px] text-textDrk font-oswald font-medium  !important;
+    @apply capitalize text-[22px] md:text-[30px] lg:text-[40px]  2xl:text-[48px] text-textDrk font-oswald font-medium  !important;
   }
   h2 {
-    @apply text-[30px]  font-oswald font-normal !important;
+    @apply text-[18px] md:text-[22px] lg:text-[30px]  2xl:text-[38px] font-oswald font-normal !important;
   }
   h3 {
-    @apply text-[20px] font-poppins font-medium !important;
+    @apply text-[14px] lg:text-[20px]  font-poppins font-medium !important;
   }
   h4 {
-    @apply text-[20px] font-oswald font-normal !important;
+    @apply text-[14px] lg:text-[20px] font-oswald font-normal !important;
   }
   h5 {
-    @apply text-lg font-poppins font-normal leading-6 !important;
+    @apply text-base lg:text-lg 2xl:text-xl font-poppins font-normal leading-6 !important;
   }
 }
 
 @layer components {
+  .text-small-kit {
+    @apply text-sm md:text-base leading-4 md:leading-5;
+  }
+  .panel-width {
+    @apply w-full  lg:max-w-[80%] 2xl:max-w-[70%];
+  }
   /* ---------------------------- project ---------------------------- */
   .project-title {
     @apply flex gap-4 items-center justify-start p-2  px-5 border-b border-DrkBorder;
   }
   .project-visit-btn {
-    @apply col-span-2 flex gap-2 w-full border border-accent bg-accent items-center text-white px-2 rounded-md h-10 hover:bg-fillLitSolid hover:text-accent hover:border-accent;
+    @apply col-span-2 flex items-center justify-center gap-2 w-full border border-accent bg-accent  text-white px-2 rounded-md h-10 hover:bg-fillLitSolid hover:text-accent hover:border-accent;
+  }
+  .project-info {
+    @apply h-full  row-span-2 p-5 pb-[15%] flex justify-between items-center;
   }
   /* ---------------------------- general --------------------------- */
   .main-layout {
-    @apply h-full min-h-screen w-full relative bg-fillLit overflow-y-scroll scrollbar-thin snap-y snap-mandatory scroll-smooth;
+    @apply h-full min-h-screen w-full relative bg-fillLit overflow-y-scroll scrollbar-none snap-y snap-mandatory ease-in-out;
   }
   .transparant-button {
-    @apply border border-accent rounded-md p-1 h-8 w-36 text-center;
+    @apply border border-accent rounded-md p-1 h-6 md:h-8  w-full text-center text-small-kit;
   }
   .modal-bg {
     @apply fixed bg-black h-screen w-full z-20 bg-opacity-50 transition-all;
   }
 
   .modal {
-    @apply absolute w-full max-w-[80%] h-[90%] bg-fillLitSolid rounded-lg z-30 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 transition-all;
+    @apply absolute panel-width h-[90%] bg-fillLitSolid rounded-lg z-30 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 transition-all overflow-hidden;
   }
 }

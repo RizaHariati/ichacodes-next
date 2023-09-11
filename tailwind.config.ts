@@ -17,7 +17,7 @@ const config: Config = {
     },
     extend: {
       animation: {
-        "bounce-once": "bounce once",
+        "bounce-once": "bounce 1s once",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

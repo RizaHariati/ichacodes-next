@@ -32,7 +32,7 @@ const Modal = (props: Props) => {
               <div className="h-full w-full">
                 <motion.div
                   variants={enterOpacity}
-                  className="h-full w-fit overflow-hidden mx-auto "
+                  className="h-full w-full overflow-hidden mx-auto "
                 >
                   <Image
                     rel="preload"
@@ -40,7 +40,7 @@ const Modal = (props: Props) => {
                     src={`/images/projects/${showProject.slug}/${showProject.modal_image}.jpg`}
                     width={1400}
                     height={1000}
-                    className="h-full w-auto mx-auto object-covers object-center bg-white "
+                    className="h-full w-auto mx-auto object-cover object-center bg-white "
                     alt={showProject.modal_image}
                     loading="lazy"
                   />

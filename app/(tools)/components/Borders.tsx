@@ -8,9 +8,17 @@ const Borders = (props: Props) => {
 
 export default Borders;
 
-export const BorderStraight = () => {
+export const BorderStraightTop = () => {
   return (
-    <div className="h-[10%] w-full lg:max-w-[80%] mx-auto">
+    <div className="h-[5%] lg:h-[10%] panel-width mx-auto">
+      <div className="w-1/2  h-full border-r-2 border-DrkBorder"></div>
+    </div>
+  );
+};
+
+export const BorderStraightBottom = () => {
+  return (
+    <div className=" h-[10%] panel-width mx-auto">
       <div className="w-1/2  h-full border-r-2 border-DrkBorder"></div>
     </div>
   );

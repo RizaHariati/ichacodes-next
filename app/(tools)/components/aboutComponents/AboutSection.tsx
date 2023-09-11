@@ -12,7 +12,7 @@ type Props = {};
 const AboutSection = (props: Props) => {
   return (
     <section id="header" className="w-full h-screen flex flex-col snap-end ">
-      <div className="h-full w-full lg:max-w-[80%] bg-fillLitSolid mx-auto rounded-b-lg shadow-sm relative overflow-hidden">
+      <div className="h-full panel-width bg-fillLitSolid mx-auto rounded-b-lg shadow-sm relative overflow-hidden">
         <div className="flex flex-col gap-2 pr-48 h-full pt-14 w-full px-10 ">
           <motion.div className=" flex flex-col gap-2 w-full ">
             {/* -------------------- IMAGE AND ABOUT ME TEXT ------------------- */}
@@ -23,10 +23,17 @@ const AboutSection = (props: Props) => {
               viewport={{ once: true }}
               className="w-full flex items-end justify-end gap-5"
             >
-              <motion.h1 variants={enterTitleVariants} className=" text-accent">
+              <motion.h1
+                key="me"
+                variants={enterTitleVariants}
+                className=" text-accent"
+              >
                 About me
               </motion.h1>
-              <div className=" w-28 aspect-square bottom-0 left-0 overflow-hidden col-span-2 rounded-md ">
+              <motion.div
+                key="my-image"
+                className=" w-28 aspect-square bottom-0 left-0 overflow-hidden col-span-2 rounded-md "
+              >
                 <Image
                   priority
                   height={300}
@@ -35,7 +42,7 @@ const AboutSection = (props: Props) => {
                   alt="main image"
                   className=" object-center object-cover w-full h-full"
                 />
-              </div>
+              </motion.div>
             </motion.div>
             {/* -------------------------- BOTTOM LINE ------------------------- */}
           </motion.div>
@@ -72,7 +79,7 @@ const AboutSection = (props: Props) => {
           </motion.div>
         </div>
       </div>
-      <div className="h-36 w-full lg:max-w-[80%] mx-auto grid grid-cols-4 items-center ">
+      <div className="h-36 panel-width mx-auto grid grid-cols-4 items-center ">
         <p className="text-textDrk font-oswald text-[30px] tracking-[2px] text-right w-full  animate-pulse pr-3 h-1/2">
           My Skills
         </p>

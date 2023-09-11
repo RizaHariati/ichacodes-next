@@ -5,9 +5,12 @@
 
 @layer components {
   .nav-btn {
-    @apply bg-white active:bg-textLit flex items-center gap-2 w-full justify-between pr-2 rounded-sm opacity-100 hover:bg-opacity-60 active:text-black shadow-sm  shadow-textLit text-textDrk hover:text-textLit  p-1;
+    @apply bg-white active:bg-textLit flex items-center gap-2 justify-between rounded-sm opacity-100 hover:bg-opacity-60 active:text-black shadow-sm  shadow-textLit text-textDrk hover:text-textLit p-1 h-12 w-12 lg:w-full lg:pr-2;
   }
   .nav-btn-img {
-    @apply h-10 w-10 overflow-hidden rounded-sm group-hover:opacity-60 active:opacity-0;
+    @apply h-full aspect-square overflow-hidden rounded-sm group-hover:opacity-60 active:opacity-0;
+  }
+  .nav-btn-txt {
+    @apply hidden lg:block;
   }
 }
