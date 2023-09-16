@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClose } from "@fortawesome/free-solid-svg-icons";
 import { useGlobalContext } from "../context/AppProvider";
@@ -11,6 +11,7 @@ type Props = {};
 
 const Modal = (props: Props) => {
   const { closeModal, showModal, showProject } = useGlobalContext();
+
   return (
     <AnimatePresence>
       {showModal && (
@@ -24,7 +25,7 @@ const Modal = (props: Props) => {
           <div className="modal">
             <button
               onClick={() => closeModal()}
-              className="absolute top-5 right-5"
+              className="absolute top-2 right-2 md:top-5 md:right-5"
             >
               <FontAwesomeIcon icon={faClose} className="h-6" />
             </button>
@@ -34,16 +35,30 @@ const Modal = (props: Props) => {
                   variants={enterOpacity}
                   className="h-full w-full overflow-hidden mx-auto "
                 >
-                  <Image
-                    rel="preload"
-                    placeholder="empty"
-                    src={`/images/projects/${showProject.slug}/${showProject.modal_image}.jpg`}
-                    width={1400}
-                    height={1000}
-                    className="h-full w-auto mx-auto object-cover object-center bg-white "
-                    alt={showProject.modal_image}
-                    loading="lazy"
-                  />
+                  {window.innerWidth > 450 && (
+                    <Image
+                      rel="preload"
+                      placeholder="empty"
+                      src={`/images/projects/${showProject.slug}/${showProject.modal_image}.jpg`}
+                      width={1400}
+                      height={1000}
+                      className="h-full w-auto mx-auto object-cover object-center "
+                      alt={showProject.modal_image}
+                      loading="lazy"
+                    />
+                  )}
+                  {window.innerWidth <= 450 && (
+                    <Image
+                      rel="preload"
+                      placeholder="empty"
+                      src={`/images/projects/${showProject.slug}/${showProject.phone_image}.jpg`}
+                      width={400}
+                      height={750}
+                      className="h-[90%] w-auto mx-auto object-cover object-center "
+                      alt={showProject.phone_image}
+                      loading="lazy"
+                    />
+                  )}
                 </motion.div>
                 <motion.div className="project-title absolute bottom-0 justify-end  border-t w-full">
                   <motion.h2

@@ -12,7 +12,7 @@ type Props = {};
 
 const AboutSection = (props: Props) => {
   return (
-    <section id="header" className="w-full h-fit  flex flex-col">
+    <section id="header" className="w-full h-fit  flex flex-col snap-start">
       <div className="h-fit  over panel-width bg-fillLitSolid mx-auto rounded-b-lg shadow-sm  ">
         <div className="h-full flex flex-col gap-2 p-5 pt-14 2xl:pt-24 w-full ">
           {/* -------------------- IMAGE AND ABOUT ME TEXT ------------------- */}
@@ -47,8 +47,8 @@ const AboutSection = (props: Props) => {
             {/* -------------------------- BOTTOM LINE ------------------------- */}
           </motion.div>
 
-          <motion.div className="  flex flex-col gap-2 h-full md:min-h-[350px] 2xl:min-h-[450px] lg:px-10">
-            <p className="leading-5  pr-14 lg:pr-36 2xl:leading-normal 2xl:text-lg">
+          <motion.div className="  flex flex-col gap-2 h-full md:min-h-[350px] 2xl:min-h-[450px] lg:px-10 ">
+            <p className="leading-5  pr-14 lg:pr-36 2xl:leading-normal 2xl:text-lg  ">
               I was an architect for quite some time until that moment when the
               COVID hit, then I thought, &#39;Life is too short!&#39;and decided
               to invest my money and time in learning programming and Mandarin.

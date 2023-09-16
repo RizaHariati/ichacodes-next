@@ -50,7 +50,10 @@ const Navbar = (props: Props) => {
             whileInView="animate"
             className=" h-full flex flex-col items-end gap-2 border-l-2 border-accent pl-5 pt-5 "
           >
-            <motion.button
+            <motion.a
+              href="https://github.com/RizaHariati"
+              target="_blank"
+              rel="noopener noreferrer"
               key="btn-1"
               variants={enterVariantChild}
               className="nav-btn group"
@@ -68,8 +71,11 @@ const Navbar = (props: Props) => {
                 />
               </div>
               <h3 className="nav-btn-txt"> Github</h3>
-            </motion.button>
-            <motion.button
+            </motion.a>
+            <motion.a
+              href="https://id.linkedin.com/in/riza-hariati-2021"
+              target="_blank"
+              rel="noopener noreferrer"
               key="btn-2"
               variants={enterVariantChild}
               className="nav-btn group"
@@ -87,7 +93,7 @@ const Navbar = (props: Props) => {
                 />
               </div>
               <h3 className="nav-btn-txt"> Linkedin</h3>
-            </motion.button>
+            </motion.a>
             <motion.button
               onClick={() => router.push("/about")}
               key="btn-3"

@@ -30,7 +30,7 @@ type IntroProps = {
 export const BorderIntro = ({ text }: IntroProps) => {
   return (
     <div className="h-28 panel-width mx-auto grid grid-cols-4 items-center ">
-      <p className="text-textDrk font-oswald  text-[20px] md:text-[30px] tracking-0 md:tracking-[2px] text-right w-full  animate-pulse pr-3 h-1/2 mb-10 md:mb-0">
+      <p className="text-textDrk font-oswald  text-[20px] md:text-[30px] tracking-0 md:tracking-[2px] text-right w-full  animate-pulse pr-3 h-1/2 mb-5 md:mb-0 whitespace-nowrap">
         {text}
       </p>
       <div className="flex flex-col h-full">

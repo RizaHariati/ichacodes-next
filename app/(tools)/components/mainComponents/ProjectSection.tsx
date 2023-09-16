@@ -25,7 +25,7 @@ const ProjectSection = ({ project, evenOdd }: Props) => {
   return (
     <section
       id={project.id}
-      className="w-full h-screen bg-fillLit flex flex-col snap-center animate-bounce-once"
+      className="w-full h-screen bg-fillLit flex flex-col snap-center animate-bounce-once "
     >
       <BorderStraightTop />
       <div className="h-full panel-width mx-auto bg-fillLitSolid rounded-lg  overflow-hidden">
@@ -119,10 +119,12 @@ const ProjectInfo = ({ project, evenOdd }: Props) => {
   return (
     <div
       className={
-        evenOdd === "even" ? "  project-info  md:col-start-2 " : " project-info"
+        evenOdd === "even"
+          ? "  project-info  md:col-start-2  lg:pr-10 md:pl-0 md:pr-5"
+          : " project-info  lg:pl-10 md:pr-0 md:pl-5"
       }
     >
-      <div className="leading-5 2xl:text-xl">
+      <div className="leading-normal md:leading-4 lg:leading-5 2xl:text-xl my-auto ">
         {project.description.map((item, index) => {
           return <p key={index}>{item}</p>;
         })}

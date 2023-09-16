@@ -6,6 +6,7 @@ export type ProjectType = {
   slug: string;
   img_logo: string;
   main_image: string;
+  phone_image: string;
   modal_image: string;
   description: string[];
   mainProgram: string;

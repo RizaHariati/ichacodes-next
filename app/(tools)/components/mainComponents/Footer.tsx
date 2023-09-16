@@ -5,8 +5,8 @@ type Props = {};
 
 const Footer = (props: Props) => {
   return (
-    <section id="copyright" className="w-full h-30  snap-end ">
-      <div className=" h-20 panel-width  mx-auto grid grid-cols-4 items-center ">
+    <section id="copyright" className="w-full h-30 snap-end ">
+      <div className=" h-32 panel-width  mx-auto grid grid-cols-4 items-center ">
         <div className="col-span-2"></div>
         <div className="flex flex-col h-full col-span-2">
           <div className="grid grid-cols-3">

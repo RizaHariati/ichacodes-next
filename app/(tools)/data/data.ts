@@ -10,6 +10,7 @@ export const projects: ProjectType[] = [
     img_logo: "bayarplanner-logo",
     main_image: "bayarplanner_monitor",
     modal_image: "bayarplanner_screenPhone",
+    phone_image: "bayarplanner_mainphone",
     description: [
       "BayarPlanner is a website that schedules and records daily financial transactions, also calculates data to create simple invoices.",
 
@@ -28,6 +29,7 @@ export const projects: ProjectType[] = [
     slug: "rs-uripsumoharjo",
     img_logo: "rs-uripsumoharjo-logo",
     main_image: "rs-uripsumoharjo_monitor",
+    phone_image: "rs-uripsumoharjo_mainphone",
     modal_image: "rs-uripsumoharjo_screenPhone",
     description: [
       "A website design proposal for a local hospital in Bandar Lampung. The design wasn't approved by my client but I can keep it for my own portfolio.",
@@ -47,6 +49,7 @@ export const projects: ProjectType[] = [
     slug: "sudahnonton",
     img_logo: "sudahnonton-logo",
     main_image: "sudahnonton_monitor",
+    phone_image: "sudahnonton_mainphone",
     modal_image: "sudahnonton_screenPhone",
     description: [
       "SudahNonton is a movie and TV Shows database website that also serves as REST API provider that can be consumed by other websites or applications.",
@@ -67,6 +70,7 @@ export const projects: ProjectType[] = [
     slug: "azriclone",
     img_logo: "azriclone-logo",
     main_image: "azriclone_monitor",
+    phone_image: "azriclone_mainphone",
     modal_image: "azriclone_screenPhone",
     description: [
       "This website is based on Facebook's website design, mainly to showcase my ability in accessing and processing data with Rest API.",
