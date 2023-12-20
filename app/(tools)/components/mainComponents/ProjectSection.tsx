@@ -30,8 +30,8 @@ const ProjectSection = ({ project, evenOdd }: Props) => {
       <BorderStraightTop />
       <div className="h-full panel-width mx-auto bg-fillLitSolid rounded-lg  overflow-hidden ">
         <TitleProject project={project} evenOdd={evenOdd} />
-        <div className=" h-full w-full grid grid-cols-1 grid-rows-3 sm:grid-rows-4 md:grid-cols-2">
-          <div className="h-full md:row-span-3 flex items-start justify-start overflow-hidden relative  ">
+        <div className=" h-full w-full grid grid-cols-1 grid-rows-3 sm:grid-rows-4 sm:grid-cols-2">
+          <div className="h-full sm:row-span-3 flex items-start justify-start overflow-hidden relative  ">
             <AnimatePresence>
               <motion.div
                 key={project.id}
@@ -55,7 +55,7 @@ const ProjectSection = ({ project, evenOdd }: Props) => {
                 <motion.button
                   variants={enterOpacity}
                   onClick={() => openModal(project)}
-                  className=" h-12 w-12 md:h-16 md:w-16  overflow-hidden absolute  z-20 bottom-[5%] right-[5%] "
+                  className=" h-12 w-12 sm:h-16 sm:w-16  overflow-hidden absolute  z-20 bottom-[5%] right-[5%] "
                 >
                   <Image
                     rel="preload"
@@ -88,7 +88,7 @@ export const TitleProject = ({ project, evenOdd }: Props) => {
       initial="initial"
       whileInView="animate"
       className={
-        evenOdd === "even" ? "project-title" : "project-title md:justify-end "
+        evenOdd === "even" ? "project-title" : "project-title sm:justify-end "
       }
     >
       <motion.h2
@@ -96,7 +96,7 @@ export const TitleProject = ({ project, evenOdd }: Props) => {
         className={
           evenOdd === "even"
             ? " leading-5 text-drk uppercase order-1 origin-left"
-            : " leading-5 text-drk uppercase order-1 md:order-0 "
+            : " leading-5 text-drk uppercase order-1 sm:order-0 "
         }
       >
         {project.title}
@@ -107,7 +107,7 @@ export const TitleProject = ({ project, evenOdd }: Props) => {
         src={`/images/projects/${project.slug}/${project.img_logo}.png`}
         width={50}
         height={50}
-        className="h-6 md:h-10 w-auto   object-covers rounded-full overflow-hidden bg-white shadow-sm shadow-textLit"
+        className="h-6 sm:h-10 w-auto   object-covers rounded-full overflow-hidden bg-white shadow-sm shadow-textLit"
         alt={project.slug}
         loading="lazy"
       />
@@ -120,23 +120,23 @@ const ProjectInfo = ({ project, evenOdd }: Props) => {
     <div
       className={
         evenOdd === "even"
-          ? "  project-info  md:col-start-2  lg:pr-10 md:pl-0 md:pr-5  "
-          : " project-info  lg:pl-10 md:pr-0 md:pl-5  "
+          ? "  project-info  sm:col-start-2  lg:pr-10 sm:pl-0 sm:pr-5  "
+          : " project-info  lg:pl-10 sm:pr-0 sm:pl-5  "
       }
     >
-      <div className="leading-normal md:leading-4 lg:leading-5 2xl:text-xl my-auto h-[30vh] md:h-fit overflow-y-scroll scrollbar-none">
+      <div className="leading-normal sm:leading-4 lg:leading-5 2xl:text-xl my-auto h-[30vh] sm:h-fit overflow-y-scroll scrollbar-none">
         {project.description.map((item, index) => {
           return <p key={index}>{item}</p>;
         })}
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-3 w-full gap-2 2xl:text-xl ">
+      <div className="grid grid-cols-2 sm:grid-cols-3 w-full gap-2 2xl:text-xl ">
         <p className="transparant-button">Library/Framework</p>
-        <p className=" md:col-span-2 p-1 text-small-kit">
+        <p className=" sm:col-span-2 p-1 text-small-kit">
           {project.mainProgram}
         </p>
 
         <p className="transparant-button">Dependencies</p>
-        <p className=" md:col-span-2 p-1 text-small-kit">
+        <p className=" sm:col-span-2 p-1 text-small-kit">
           {project.dependencies}
         </p>
 

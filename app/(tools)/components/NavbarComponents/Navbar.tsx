@@ -11,7 +11,7 @@ const Navbar = (props: Props) => {
   const pathname = usePathname();
   return (
     <div className="w-full h-screen  ">
-      <div className=" h-[45%] md:h-[80%] panel-width mx-auto overflow-hidden flex flex-row z-10 ">
+      <div className=" h-[45%] sm:h-[80%] panel-width mx-auto overflow-hidden flex flex-row z-10 ">
         {/* --------------------------- LOGO ATAS -------------------------- */}
 
         <motion.div
@@ -41,7 +41,7 @@ const Navbar = (props: Props) => {
           </Link>
         </motion.div>
         {/* -------------------------- MENU KANAN -------------------------- */}
-        <div className=" h-full w-[72px] lg:w-44 py-0 md:py-14 2xl:py-24 z-30  overflow-hidden">
+        <div className=" h-full w-[72px] lg:w-44 py-0 sm:py-14 2xl:py-24 z-30  overflow-hidden">
           <motion.div
             key={pathname + "button"}
             variants={enterVariant}
