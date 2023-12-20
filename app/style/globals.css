@@ -47,7 +47,7 @@
     @apply col-span-2 md:col-span-3 flex items-center justify-center gap-3 w-full border border-accent bg-accent  text-white px-2 rounded-md h-8 hover:bg-fillLitSolid hover:text-accent hover:border-accent;
   }
   .project-info {
-    @apply h-full w-full md:row-start-2  row-span-2 p-5 pb-[20%] pt-0 flex flex-col justify-between items-center;
+    @apply h-full w-full md:row-start-2  row-span-3 p-5 pb-[10vh] sm:pb-[20vh] md:pb-[17vh] pt-0 flex flex-col justify-between items-center;
   }
   /* ---------------------------- general --------------------------- */
   .main-layout {

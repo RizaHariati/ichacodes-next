@@ -44,6 +44,26 @@ export const projects: ProjectType[] = [
   {
     project_index: 3,
     id: "IC003",
+    url: "https://rsus-api.vercel.app/",
+    title: "Administrasi RSUS",
+    slug: "rsus",
+    img_logo: "rsus-logo",
+    main_image: "rsus_monitor",
+    phone_image: "rsus_mainphone",
+    modal_image: "rsus_screenPhone",
+    description: [
+      "This website is inspired by Sanity.io form design. I use this website to master creating forms and connecting them to the Back End.  I purposefully did not use any form library ",
+
+      "Using Next-Sanity, combined with Next.JS API, I can place all the codes into one folder. Very practical for me as this website is relatively small",
+
+      "Another challenge for me when creating this website is on creating a responsive website through codes instead of through CSS",
+    ],
+    mainProgram: "Next.JS",
+    dependencies: "Next-Sanity, Sanity.Io, Tailwind.CSS",
+  },
+  {
+    project_index: 4,
+    id: "IC004",
     url: "https://sudahnonton.ichacodes.com/",
     title: "SudahNonton",
     slug: "sudahnonton",
@@ -61,10 +81,9 @@ export const projects: ProjectType[] = [
     mainProgram: "Laravel 8",
     dependencies: "Laravel-mix, Bootstrap, Axios",
   },
-
   {
-    project_index: 4,
-    id: "IC004",
+    project_index: 5,
+    id: "IC005",
     url: "https://azriclone.netlify.app/",
     title: "AzriClone",
     slug: "azriclone",

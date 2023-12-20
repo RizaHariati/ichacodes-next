@@ -25,13 +25,13 @@ const ProjectSection = ({ project, evenOdd }: Props) => {
   return (
     <section
       id={project.id}
-      className="w-full h-screen bg-fillLit flex flex-col snap-center animate-bounce-once "
+      className="w-full h-screen bg-fillLit flex flex-col snap-center animate-bounce-once   "
     >
       <BorderStraightTop />
-      <div className="h-full panel-width mx-auto bg-fillLitSolid rounded-lg  overflow-hidden">
+      <div className="h-full panel-width mx-auto bg-fillLitSolid rounded-lg  overflow-hidden ">
         <TitleProject project={project} evenOdd={evenOdd} />
-        <div className=" h-full w-full grid grid-cols-1 grid-rows-3 md:grid-cols-2 ">
-          <div className="h-full md:row-span-2 flex items-start justify-start overflow-hidden relative ">
+        <div className=" h-full w-full grid grid-cols-1 grid-rows-3 sm:grid-rows-4 md:grid-cols-2">
+          <div className="h-full md:row-span-3 flex items-start justify-start overflow-hidden relative  ">
             <AnimatePresence>
               <motion.div
                 key={project.id}
@@ -40,7 +40,7 @@ const ProjectSection = ({ project, evenOdd }: Props) => {
                 whileInView="animate"
                 exit="exit"
                 viewport={{ once: true }}
-                className="h-full overflow-hidden  relative mx-auto"
+                className="h-full overflow-hidden  relative mx-auto "
               >
                 <Image
                   rel="preload"
@@ -120,16 +120,16 @@ const ProjectInfo = ({ project, evenOdd }: Props) => {
     <div
       className={
         evenOdd === "even"
-          ? "  project-info  md:col-start-2  lg:pr-10 md:pl-0 md:pr-5"
-          : " project-info  lg:pl-10 md:pr-0 md:pl-5"
+          ? "  project-info  md:col-start-2  lg:pr-10 md:pl-0 md:pr-5  "
+          : " project-info  lg:pl-10 md:pr-0 md:pl-5  "
       }
     >
-      <div className="leading-normal md:leading-4 lg:leading-5 2xl:text-xl my-auto ">
+      <div className="leading-normal md:leading-4 lg:leading-5 2xl:text-xl my-auto h-[30vh] md:h-fit overflow-y-scroll scrollbar-none">
         {project.description.map((item, index) => {
           return <p key={index}>{item}</p>;
         })}
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-3 w-full gap-2 2xl:text-xl">
+      <div className="grid grid-cols-2 md:grid-cols-3 w-full gap-2 2xl:text-xl ">
         <p className="transparant-button">Library/Framework</p>
         <p className=" md:col-span-2 p-1 text-small-kit">
           {project.mainProgram}
