@@ -120,7 +120,7 @@ const ProjectInfo = ({ project, evenOdd }: Props) => {
     <div
       className={
         evenOdd === "even"
-          ? "  project-info  sm:col-start-2  lg:pr-10 sm:pl-0 sm:pr-5  "
+          ? "  project-info  sm:col-start-2  lg:pr-10 sm:pl-0 sm:pr-5 "
           : " project-info  lg:pl-10 sm:pr-0 sm:pl-5  "
       }
     >
