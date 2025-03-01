@@ -19,20 +19,48 @@ export const enterOpacityLeft = {
 };
 
 export const enterOpacity = {
-  initial: { opacity: 0 },
+  initial: { opacity: 1 },
   animate: {
     opacity: 1,
-
     transition: {
-      duration: 0.5,
-      stiffness: 30,
+      duration: 0.1,
+      ease: "easeIn",
+      stiffness: 300,
+      staggerChildren: 0.2,
     },
   },
   exit: {
-    opacity: 0,
+    opacity: 1,
     transition: {
-      duration: 0.5,
-      stiffness: 30,
+      duration: 0.1,
+      ease: "easeIn",
+      stiffness: 300,
+    },
+  },
+};
+
+export const enterOpacityChild = {
+  initial: { opacity: 1, x: "-50%", y: "-50%" },
+  animate: {
+    opacity: 1,
+    x: "-50%",
+    y: "-50%",
+    transition: {
+      duration: 0.2,
+      ease: "easeIn",
+      delay: 0.1,
+      stiffness: 300,
+    },
+  },
+  exit: {
+    opacity: 1,
+    x: "-50%",
+    y: "-50%",
+    transition: {
+      duration: 0.2,
+      ease: "easeIn",
+
+      stiffness: 300,
     },
   },
 };
@@ -63,9 +91,9 @@ export const enterVariantChild = {
 };
 
 export const enterTitleVariants = {
-  initial: { letterSpacing: "20px", opacity: 0 },
+  initial: { letterSpacing: "4px", opacity: 0 },
   animate: {
-    letterSpacing: "10px",
+    letterSpacing: "2px",
     opacity: 1,
     transition: {
       duration: 1,

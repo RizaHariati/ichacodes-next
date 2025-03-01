@@ -10,7 +10,10 @@ export const metadata: Metadata = {
 
 export default function About() {
   return (
-    <main id="about-page" className="absolute w-full top-0 z-0">
+    <main
+      id="about-page"
+      className="absolute w-full top-0 z-0 flex items-center flex-col justify-start"
+    >
       <BackToTop elementId="about-page" />
       <AboutSection />
       <SkillSection />

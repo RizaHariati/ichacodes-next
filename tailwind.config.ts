@@ -12,7 +12,6 @@ const config: Config = {
       DEFAULT: "800ms",
     },
     fontFamily: {
-      oswald: ["var(--oswald)", "sans-serif"],
       poppins: ["var(--poppins)", "sans-serif"],
     },
     extend: {
@@ -26,7 +25,7 @@ const config: Config = {
       },
 
       colors: {
-        textDrk: "#1e293b",
+        textDrk: "#3b381e",
         textMed: "#484943",
         textLit: "#7C7D6D",
         fillLitSolid: "#F3F4EF",
@@ -39,9 +38,10 @@ const config: Config = {
         button: "#7C7D6D",
         buttonHover: "#96988A",
         buttonActive: "#545750",
-        accent: "#C99383",
-        accentHover: "#d4a99c",
-        accentActive: "#dfbeb5",
+        accent: "#876669",
+        accent2: "#87575c",
+        accentHover: "#ae9183 ",
+        accentActive: "#d6c8c1 ",
         accentOpacity: "#dfbeb55e",
         shadow: "#1e293b",
       },

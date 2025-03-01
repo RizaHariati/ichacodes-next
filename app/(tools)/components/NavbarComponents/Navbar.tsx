@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
-import { AnimatePresence, motion } from "framer-motion";
-import { enterVariant, enterVariantChild } from "@/app/style/variants";
+import { motion } from "framer-motion";
+import { enterVariant } from "@/app/style/variants";
 import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
 type Props = {};
@@ -10,16 +10,16 @@ const Navbar = (props: Props) => {
   const router = useRouter();
   const pathname = usePathname();
   return (
-    <div className="w-full h-screen  ">
-      <div className=" h-[45%] sm:h-[80%] panel-width mx-auto overflow-hidden flex flex-row z-10 ">
+    <div className="w-full h-[calc(20svh+250px)]   ">
+      <div className="h-full  panel-width mx-auto overflow-hidden flex flex-row z-10  ">
         {/* --------------------------- LOGO ATAS -------------------------- */}
 
-        <motion.div
+        <div
           key={pathname + "logo"}
-          variants={enterVariant}
-          initial="initial"
-          whileInView="animate"
-          exit="exit"
+          // variants={enterVariant}
+          // initial="initial"
+          // whileInView="animate"
+          // exit="exit"
           className=" w-full z-30"
         >
           <Link href="/" className="flex items-center gap-2 p-2  ">
@@ -39,9 +39,9 @@ const Navbar = (props: Props) => {
               Icha<span className="text-accent">Codes</span>
             </p>
           </Link>
-        </motion.div>
+        </div>
         {/* -------------------------- MENU KANAN -------------------------- */}
-        <div className=" h-full w-[72px] lg:w-44 py-0 sm:py-14 2xl:py-24 z-30  overflow-hidden">
+        <div className=" h-full w-[72px] lg:w-60 py-0 lg:pb-20 z-30  overflow-hidden ">
           <motion.div
             key={pathname + "button"}
             variants={enterVariant}
@@ -50,12 +50,11 @@ const Navbar = (props: Props) => {
             whileInView="animate"
             className=" h-full flex flex-col items-end gap-2 border-l-2 border-accent pl-5 pt-5 "
           >
-            <motion.a
+            <a
               href="https://github.com/RizaHariati"
               target="_blank"
               rel="noopener noreferrer"
               key="btn-1"
-              variants={enterVariantChild}
               className="nav-btn group"
             >
               <div className="nav-btn-img">
@@ -71,13 +70,12 @@ const Navbar = (props: Props) => {
                 />
               </div>
               <h3 className="nav-btn-txt"> Github</h3>
-            </motion.a>
-            <motion.a
+            </a>
+            <a
               href="https://id.linkedin.com/in/riza-hariati-2021"
               target="_blank"
               rel="noopener noreferrer"
               key="btn-2"
-              variants={enterVariantChild}
               className="nav-btn group"
             >
               <div className="nav-btn-img">
@@ -93,11 +91,10 @@ const Navbar = (props: Props) => {
                 />
               </div>
               <h3 className="nav-btn-txt"> Linkedin</h3>
-            </motion.a>
-            <motion.button
+            </a>
+            <button
               onClick={() => router.push("/about")}
               key="btn-3"
-              variants={enterVariantChild}
               className="nav-btn group"
             >
               <div className="nav-btn-img">
@@ -113,7 +110,7 @@ const Navbar = (props: Props) => {
                 />
               </div>
               <h3 className="nav-btn-txt"> About</h3>
-            </motion.button>
+            </button>
           </motion.div>
         </div>
       </div>

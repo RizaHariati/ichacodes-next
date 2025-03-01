@@ -4,6 +4,24 @@ export const projects: ProjectType[] = [
   {
     project_index: 1,
     id: "IC001",
+    url: "https://skulalingua.com/",
+    title: "SkulaLingua",
+    slug: "skulalingua",
+    img_logo: "skulalingua-logo",
+    main_image: "skulalingua_monitor",
+    modal_image: "skulalingua_screenPhone",
+    phone_image: "skulalingua_mainphone",
+    description: [
+      "Skulalingua will help you learn Mandarin on your laptop or your mobile phone. The main goal is to increase your Mandarin word library and help you to be able to do daily communication using Mandarin.",
+
+      "The target students for this website are Indonesian people from all segments, that's why I'm using Indonesian non-standard grammar to get them to connect easier to Mandarin grammar.",
+    ],
+    mainProgram: "React.js, Node.js ",
+    dependencies: "Tailwind CSS,Typescript, redux toolkit",
+  },
+  {
+    project_index: 2,
+    id: "IC002",
     url: "https://bayarPlanner.com/",
     title: "BayarPlanner",
     slug: "bayarplanner",
@@ -22,8 +40,8 @@ export const projects: ProjectType[] = [
     dependencies: "Typescript,Tailwind CSS, ReactDatepicker",
   },
   {
-    project_index: 2,
-    id: "IC002",
+    project_index: 3,
+    id: "IC003",
     url: "https://rsuripsumoharjo-model.netlify.app/",
     title: "RS Urip Sumoharjo",
     slug: "rs-uripsumoharjo",
@@ -42,8 +60,8 @@ export const projects: ProjectType[] = [
     dependencies: " ReactDatePicker, FramerMotion",
   },
   {
-    project_index: 3,
-    id: "IC003",
+    project_index: 4,
+    id: "IC004",
     url: "https://rsus-api.vercel.app/",
     title: "Administrasi RSUS",
     slug: "rsus",
@@ -60,45 +78,5 @@ export const projects: ProjectType[] = [
     ],
     mainProgram: "Next.JS",
     dependencies: "Next-Sanity, Sanity.Io, Tailwind.CSS",
-  },
-  {
-    project_index: 4,
-    id: "IC004",
-    url: "https://sudahnonton.ichacodes.com/",
-    title: "SudahNonton",
-    slug: "sudahnonton",
-    img_logo: "sudahnonton-logo",
-    main_image: "sudahnonton_monitor",
-    phone_image: "sudahnonton_mainphone",
-    modal_image: "sudahnonton_screenPhone",
-    description: [
-      "SudahNonton is a movie and TV Shows database website that also serves as REST API provider that can be consumed by other websites or applications.",
-
-      "The design is based on the Netflix website design using real data from The Movie DB and I chose to use Laravel so it can be used as Front end as well as Back End.",
-
-      "I watched and I like all of the movies and TV shows in this website, so it also can be used as recommendation for movie night ",
-    ],
-    mainProgram: "Laravel 8",
-    dependencies: "Laravel-mix, Bootstrap, Axios",
-  },
-  {
-    project_index: 5,
-    id: "IC005",
-    url: "https://azriclone.netlify.app/",
-    title: "AzriClone",
-    slug: "azriclone",
-    img_logo: "azriclone-logo",
-    main_image: "azriclone_monitor",
-    phone_image: "azriclone_mainphone",
-    modal_image: "azriclone_screenPhone",
-    description: [
-      "This website is based on Facebook's website design, mainly to showcase my ability in accessing and processing data with Rest API.",
-
-      "All mock-up data in this website are from DUMMYAPI.IO, a free ready-to-use API Service filled with dummy data",
-
-      "Combining Typescript with Redux/toolkit, Redux/persist and Next Redux Wrapper, was a bit of a challenge for me, but turned out to be very useful for later use",
-    ],
-    mainProgram: "Next.js",
-    dependencies: "Tailwind CSS, Redux Toolkit, Redux Persist",
   },
 ];

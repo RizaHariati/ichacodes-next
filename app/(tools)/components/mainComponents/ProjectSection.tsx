@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { BorderStraightBottom, BorderStraightTop } from "../Borders";
+
 import { ProjectType } from "@/types.d";
 import Image from "next/image";
 import {
@@ -25,13 +25,14 @@ const ProjectSection = ({ project, evenOdd }: Props) => {
   return (
     <section
       id={project.id}
-      className="w-full h-screen bg-fillLit flex flex-col snap-center animate-bounce-once   "
+      className="w-full h-[100svh] bg-fillLit flex flex-col snap-start animate-bounce-once p-3 "
     >
-      <BorderStraightTop />
-      <div className="h-full panel-width mx-auto bg-fillLitSolid rounded-lg  overflow-hidden ">
+      <div className="h-full panel-width mx-auto bg-fillLitSolid rounded-lg  overflow-hidden shrink flex items-center justify-between flex-col ">
         <TitleProject project={project} evenOdd={evenOdd} />
-        <div className=" h-full w-full grid grid-cols-1 grid-rows-3 sm:grid-rows-4 sm:grid-cols-2">
-          <div className="h-full sm:row-span-3 flex items-start justify-start overflow-hidden relative  ">
+        <div className="h-[85svh] flex items-center justify-between flex-col md:flex-row md:p-10 w-full">
+          <div className=" h-[28svh] md:h-[85svh] relative overflow-hidden w-full md:w-1/2 flex items-center justify-center">
+            {/* ----------------------------- image ---------------------------- */}
+
             <AnimatePresence>
               <motion.div
                 key={project.id}
@@ -40,22 +41,21 @@ const ProjectSection = ({ project, evenOdd }: Props) => {
                 whileInView="animate"
                 exit="exit"
                 viewport={{ once: true }}
-                className="h-full overflow-hidden  relative mx-auto "
+                className="h-full md:h-auto md:w-[80%]  overflow-hidden mx-auto flex items-center justify-center relative "
               >
                 <Image
                   rel="preload"
                   placeholder="empty"
                   src={`/images/projects/${project.slug}/${project.main_image}.jpg`}
-                  width={800}
-                  height={700}
-                  className="h-full w-auto  mx-auto object-covers object-center  "
+                  width={700}
+                  height={600}
+                  className="h-full md:h-auto w-auto md:w-full  mx-auto object-covers  "
                   alt={project.main_image}
                   loading="lazy"
                 />
-                <motion.button
-                  variants={enterOpacity}
+                <button
                   onClick={() => openModal(project)}
-                  className=" h-12 w-12 sm:h-16 sm:w-16  overflow-hidden absolute  z-20 bottom-[5%] right-[5%] "
+                  className=" h-12 w-12 sm:h-16 sm:w-16  overflow-hidden  absolute z-20 bottom-0 right-6 md:right-16"
                 >
                   <Image
                     rel="preload"
@@ -67,14 +67,13 @@ const ProjectSection = ({ project, evenOdd }: Props) => {
                     alt="magnifying"
                     loading="lazy"
                   />
-                </motion.button>
+                </button>
               </motion.div>
             </AnimatePresence>
           </div>
           <ProjectInfo project={project} evenOdd={evenOdd} />
         </div>
       </div>
-      <BorderStraightBottom />
     </section>
   );
 };
@@ -90,26 +89,28 @@ export const TitleProject = ({ project, evenOdd }: Props) => {
       className={
         evenOdd === "even" ? "project-title" : "project-title sm:justify-end "
       }
+      viewport={{ once: true }}
     >
-      <motion.h2
+      <motion.h3
+        viewport={{ once: true }}
         variants={enterTitleVariants}
         className={
           evenOdd === "even"
-            ? " leading-5 text-drk uppercase order-1 origin-left"
-            : " leading-5 text-drk uppercase order-1 sm:order-0 "
+            ? " leading-5 text-drk uppercase order-1 origin-left "
+            : " leading-5 text-drk uppercase order-1 sm:order-0  "
         }
       >
         {project.title}
-      </motion.h2>
+      </motion.h3>
       <Image
         rel="preload"
         placeholder="empty"
         src={`/images/projects/${project.slug}/${project.img_logo}.png`}
         width={50}
         height={50}
-        className="h-6 sm:h-10 w-auto   object-covers rounded-full overflow-hidden bg-white shadow-sm shadow-textLit"
+        className="h-6 sm:h-10 w-auto object-covers rounded-full overflow-hidden bg-white  mx-2"
         alt={project.slug}
-        loading="lazy"
+        loading="eager"
       />
     </motion.div>
   );
@@ -120,11 +121,11 @@ const ProjectInfo = ({ project, evenOdd }: Props) => {
     <div
       className={
         evenOdd === "even"
-          ? "  project-info  sm:col-start-2  lg:pr-10 sm:pl-0 sm:pr-5 "
-          : " project-info  lg:pl-10 sm:pr-0 sm:pl-5  "
+          ? "  project-info md:order-last "
+          : " project-info order-last  md:order-first "
       }
     >
-      <div className="leading-normal sm:leading-4 lg:leading-5 2xl:text-xl my-auto h-[30vh] sm:h-fit overflow-y-scroll scrollbar-none">
+      <div className="h-full md:h-fit  overflow-y-scroll scrollbar-none shrink scrollbar-thin">
         {project.description.map((item, index) => {
           return <p key={index}>{item}</p>;
         })}

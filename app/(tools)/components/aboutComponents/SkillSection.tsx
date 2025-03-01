@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { BorderStraightBottom, BorderStraightTop } from "../Borders";
+
 import dataskill from "../../data/dataskill.json";
 import Image from "next/image";
 
@@ -10,9 +10,9 @@ const SkillSection = (props: Props) => {
   return (
     <section
       id="skillSection"
-      className="w-full h-fit bg-fillLit flex flex-col"
+      className="panel-width h-fit pb-5 bg-fillLitSolid flex flex-col  px-5 snap-start mx-auto rounded-b-md lg:rounded-b-lg "
     >
-      <div className="h-full w-full panel-width mx-auto bg-fillLitSolid rounded-lg  p-5 md:p-10">
+      <div className="h-full w-full panel-width mx-auto  rounded-lg  p-0 md:p-0 ">
         <div className=" h-full w-full flex flex-col items-center justify-start gap-2">
           {dataskill.map((item) => {
             if (item.id === "skill-05") {
@@ -22,9 +22,7 @@ const SkillSection = (props: Props) => {
                   className="grid grid-cols-3 2xl:grid-cols-9 h-fit w-full bg-fillLit bg-opacity-30 rounded-md gap-2"
                 >
                   <div className="w-full h-full border-b border-white p-2 col-span-3 2xl:border-b-0 2xl:border-r">
-                    <p className="capitalize text-[25px] font-oswald">
-                      {item.category}
-                    </p>
+                    <p className="capitalize font-oswald">{item.category}</p>
                   </div>
                   <div className=" col-span-7 w-full items-center  p-5">
                     <p>
@@ -44,9 +42,7 @@ const SkillSection = (props: Props) => {
                   className="grid grid-cols-2 2xl:grid-cols-9 h-fit w-full bg-fillLit bg-opacity-30 rounded-md gap-2 "
                 >
                   <div className="w-full h-full border-b border-white p-2 col-span-2 2xl:border-b-0 2xl:border-r">
-                    <p className="capitalize text-[25px]  font-oswald">
-                      {item.category}
-                    </p>
+                    <h2 className="capitalize  font-oswald">{item.category}</h2>
                   </div>
                   <div className="col-span-2 2xl:col-span-7 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 w-full items-center p-2  ">
                     {item.skills.map((skillitem) => {
@@ -97,8 +93,6 @@ const SkillSection = (props: Props) => {
           })}
         </div>
       </div>
-
-      <BorderStraightBottom />
     </section>
   );
 };
